@@ -1,23 +1,9 @@
-/* ======== SETĂRI GLOBALE ȘI VARIABILE ======== */
-:root {
-    --primary-color: #ff6600; /* Portocaliu (din butoane, tag-uri) */
-    --primary-hover: #e65c00;
-    --dark-blue: #0a2540;     /* Albastru închis (din footer, butoane) */
-    --text-dark: #333;
-    --text-light: #f4f7f6;
-    --background-light: #f8f9fa;
-    --white: #ffffff;
-    --grey: #6c757d;
-    --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    --border-radius: 12px;
-}
-
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    color: var(--text-dark);
-    background-color: var(--background-light);
+    color: #333;
+    background-color: #f8f9fa;
     line-height: 1.6;
 }
 
@@ -41,7 +27,7 @@ h2 {
 .section-subtitle {
     text-align: center;
     font-size: 1.1rem;
-    color: var(--grey);
+    color: #6c757d;
     max-width: 600px;
     margin: 0 auto 40px auto;
 }
@@ -57,17 +43,17 @@ h2 {
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: #ff6600;
+    color: #ffffff;
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-hover);
+    background-color: #e65c00;
 }
 
 .btn-dark {
-    background-color: var(--dark-blue);
-    color: var(--white);
+    background-color: #0a2540;
+    color: #ffffff;
 }
 
 .btn-dark:hover {
@@ -75,12 +61,11 @@ h2 {
 }
 
 .text-primary {
-    color: var(--primary-color);
+    color: #ff6600;
 }
 
-/* ======== 1. BARA DE NAVIGAȚIE (HEADER) ======== */
 .navbar {
-    background-color: var(--white);
+    background-color: #ffffff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     padding: 15px 0;
     position: sticky;
@@ -97,23 +82,22 @@ h2 {
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--dark-blue);
+    color: #0a2540;
     text-decoration: none;
 }
 
 .nav-links a {
     margin-left: 30px;
     text-decoration: none;
-    color: var(--text-dark);
+    color: #333;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: var(--primary-color);
+    color: #ff6600;
 }
 
-/* ======== 2. SECȚIUNEA HERO ======== */
 .hero {
     position: relative;
     height: 80vh;
@@ -121,8 +105,7 @@ h2 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--white);
-    background: url('path/to/hero-background.jpg') no-repeat center center/cover;
+    color: #ffffff;
 }
 
 .hero-overlay {
@@ -151,24 +134,23 @@ h2 {
     margin-bottom: 40px;
 }
 
-/* Formularul de căutare */
 .search-form-container {
-    background: var(--white);
+    background: #ffffff;
     padding: 20px;
-    border-radius: var(--border-radius);
+    border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     gap: 15px;
-    color: var(--text-dark);
+    color: #333;
 }
 
 .search-form-group {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    flex: 1; /* Fiecare grup ocupă spațiu egal */
+    flex: 1;
 }
 
 .search-form-group label {
@@ -183,10 +165,9 @@ h2 {
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 1rem;
-    box-sizing: border-box; /* Asigură că padding-ul nu afectează lățimea */
+    box-sizing: border-box;
 }
 
-/* ======== 3. DESTINAȚII POPULARE ======== */
 .popular-destinations {
     padding: 80px 0;
 }
@@ -198,9 +179,9 @@ h2 {
 }
 
 .destination-card {
-    background: var(--white);
-    border-radius: var(--border-radius);
-    box-shadow: var(--card-shadow);
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
@@ -221,8 +202,8 @@ h2 {
     position: absolute;
     top: 15px;
     left: 15px;
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: #ff6600;
+    color: #ffffff;
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -239,7 +220,7 @@ h2 {
 }
 
 .location {
-    color: var(--grey);
+    color: #6c757d;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -268,19 +249,18 @@ h2 {
 .price {
     font-size: 1.4rem;
     font-weight: 700;
-    color: var(--dark-blue);
+    color: #0a2540;
 }
 
 .details-link {
     font-weight: 600;
     text-decoration: none;
-    color: var(--primary-color);
+    color: #ff6600;
 }
 
-/* ======== 4. DE CE SĂ NE ALEGI? ======== */
 .why-us {
     padding: 80px 0;
-    background-color: var(--white);
+    background-color: #ffffff;
 }
 
 .feature-grid {
@@ -290,10 +270,10 @@ h2 {
 }
 
 .feature-card {
-    background: var(--background-light);
+    background: #f8f9fa;
     border: 1px solid #e0e0e0;
     padding: 30px;
-    border-radius: var(--border-radius);
+    border-radius: 12px;
     text-align: center;
 }
 
@@ -304,7 +284,7 @@ h2 {
     line-height: 80px;
     border-radius: 50%;
     margin: 0 auto 20px auto;
-    color: var(--white);
+    color: #ffffff;
 }
 .icon-blue { background-color: #007bff; }
 .icon-orange { background-color: #ff6600; }
@@ -315,7 +295,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* ======== 5. TESTIMONIALE ======== */
+/* ======== TESTIMONIALE ======== */
 .testimonials {
     padding: 80px 0;
 }
@@ -327,15 +307,15 @@ h2 {
 }
 
 .testimonial-card {
-    background: var(--white);
+    background: #ffffff;
     padding: 30px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--card-shadow);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     position: relative;
 }
 
 .testimonial-card::before {
-    content: '”'; /* Ghilimele stilizate */
+    content: '”';
     position: absolute;
     top: 10px;
     right: 20px;
@@ -353,7 +333,7 @@ h2 {
 
 .quote {
     font-style: italic;
-    color: var(--grey);
+    color: #6c757d;
     margin-bottom: 15px;
     position: relative;
     z-index: 2;
@@ -362,7 +342,7 @@ h2 {
 .quote-destination {
     display: block;
     font-weight: 600;
-    color: var(--primary-color);
+    color: #ff6600;
     margin-bottom: 20px;
 }
 
@@ -375,8 +355,8 @@ h2 {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: #ff6600;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -391,12 +371,11 @@ h2 {
 }
 .author-info span {
     font-size: 0.9rem;
-    color: var(--grey);
+    color: #6c757d;
 }
 
-/* ======== 6. FOOTER (SUBSOL) ======== */
 .footer {
-    background-color: var(--dark-blue);
+    background-color: #0a2540;
     color: #adb5bd;
     padding-top: 60px;
 }
@@ -411,21 +390,16 @@ h2 {
 .logo-footer {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--white);
+    color: #ffffff;
     text-decoration: none;
     display: block;
     margin-bottom: 15px;
 }
 
 .footer-col h3 {
-    color: var(--white);
+    color: #ffffff;
     font-size: 1.2rem;
     margin-bottom: 20px;
-}
-
-.footer-col p {
-    margin-bottom: 10px;
-    line-height: 1.7;
 }
 
 .footer-col ul {
@@ -445,7 +419,7 @@ h2 {
 }
 
 .footer-col ul a:hover {
-    color: var(--white);
+    color: #ffffff;
 }
 
 .footer-bottom {
@@ -464,54 +438,5 @@ h2 {
 }
 
 .footer-bottom-links a:hover {
-    color: var(--white);
-}
-
-
-/* ======== MEDIA QUERIES (ADAPTARE PENTRU MOBIL) ======== */
-
-@media (max-width: 992px) {
-    .nav-links {
-        display: none; /* Ascundem link-urile pe mobil (ar necesita un buton hamburger) */
-    }
-    
-    .search-form-container {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .search-form-group {
-        width: 100%;
-    }
-
-    .search-form-container .btn {
-        width: 100%;
-    }
-    
-    .feature-grid,
-    .testimonial-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .card-grid,
-    .feature-grid,
-    .testimonial-grid,
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-bottom {
-        flex-direction: column;
-        gap: 10px;
-    }
+    color: #ffffff;
 }
