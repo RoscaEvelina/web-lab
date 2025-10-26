@@ -4,57 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TravelSphere - Agenția Ta de Turism</title>
+    <link rel="icon" type="img/png" href="/travelsphere.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="navbar">
         <div class="container">
-            <a href="#" class="logo">TravelSphere</a>
-            <nav class="nav-links">
-                <a href="#">Acasă</a>
-                <a href="#">Destinații</a>
-                <a href="#">Oferte</a>
-                <a href="#">Despre Noi</a>
-                <a href="#">Contact</a>
-            </nav>
-            <a href="#" class="btn btn-primary">Rezervă Acum</a>
+            <a href="#acasa" class="logo">TravelSphere</a>
+            <div class="nav-menu">
+                <nav class="nav-links">
+                    <a href="#acasa">Acasă</a>
+                    <a href="#destinatii">Destinații</a>
+                    <a href="#destinatii">Oferte</a> 
+                    <a href="#despre-noi">Despre Noi</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <a href="#" class="btn btn-primary nav-menu-btn">Rezervă Acum</a>
+            </div>
+             <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
         </div>
     </header>
 
     <main>
-        <section class="hero">
+        
+        <section class="hero" id="acasa">
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1>Descoperă Lumea Cu <span class="text-primary">TravelSphere</span></h1>
                 <p>Experiențe de călătorie personalizate și destinații de vis din toată lumea.</p>
                 
-                <div class="search-form-container">
+                <form class="search-form-container" action="/search-results" method="GET">
                     <div class="search-form-group">
-                        <label>Destinație</label>
-                        <input type="text" placeholder="Unde mergi?">
+                        <label for="destination">Destinație</label>
+                        <input type="text" id="destination" name="destination" placeholder="Unde mergi?" list="destinatii-sugestii" required>
                     </div>
                     <div class="search-form-group">
-                        <label>Când pleci?</label>
-                        <input type="date">
+                        <label for="date">Când pleci?</label>
+                        <input type="date" id="date" name="departure_date" required>
                     </div>
                     <div class="search-form-group">
-                        <label>Călători</label>
-                        <input type="text" placeholder="2 adulți">
+                        <label for="travelers">Călători</label>
+                        <input type="number" id="travelers" name="travelers" placeholder="2 adulți" value="2" min="1" max="12">
                     </div>
-                    <button class="btn btn-dark">Caută</button>
-                </div>
+                    <button type="submit" class="btn btn-dark">Caută</button>
+                </form>
+
+                <datalist id="destinatii-sugestii">
+                    <option value="Maldive"></option>
+                    <option value="Santorini"></option>
+                    <option value="Paris"></option>
+                    <option value="Dubai"></option>
+                </datalist>
+
             </div>
         </section>
 
-        <section class="popular-destinations">
+        <section class="popular-destinations" id="destinatii">
             <div class="container">
                 <h2>Destinații Populare</h2>
                 <p class="section-subtitle">Explorează Locuri Extraordinare</p>
                 
                 <div class="card-grid">
+                    
                     <div class="destination-card">
-                        <img src="maldive-image.jpg" alt="Maldive">
+                        <img src="maldive-image.jpg" alt="Maldive" width="300" height="220">
                         <span class="card-badge">Cel mai vândut</span>
                         <div class="card-content">
                             <h3>Maldive</h3>
@@ -65,13 +84,13 @@
                             <hr>
                             <div class="card-footer">
                                 <span>Începând de la <span class="price">€2,499</span></span>
-                                <a href="#" class="details-link">Vezi detalii →</a>
+                                <a href="destinatii/maldive" class="details-link" aria-label="Vezi detalii despre vacanța în Maldive">Vezi detalii →</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="destination-card">
-                        <img src="paris-image.jpg" alt="Paris">
+                            <img src="paris-image.jpg" alt="Paris" width="300" height="220">
                         <span class="card-badge">Ofertă limitată</span>
                         <div class="card-content">
                             <h3>Paris</h3>
@@ -82,13 +101,13 @@
                             <hr>
                             <div class="card-footer">
                                 <span>Începând de la <span class="price">€1,299</span></span>
-                                <a href="#" class="details-link">Vezi detalii →</a>
+                                <a href="destinatii/paris" class="details-link" aria-label="Vezi detalii despre vacanța în Paris">Vezi detalii →</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="destination-card">
-                        <img src="santorini-image.jpg" alt="Santorini">
+                            <img src="santorini-image.jpg" alt="Santorini" width="300" height="220">
                         <span class="card-badge">Trending</span>
                         <div class="card-content">
                             <h3>Santorini</h3>
@@ -99,7 +118,7 @@
                             <hr>
                             <div class="card-footer">
                                 <span>Începând de la <span class="price">€1,899</span></span>
-                                <a href="#" class="details-link">Vezi detalii →</a>
+                                <a href="destinatii/santorini" class="details-link" aria-label="Vezi detalii despre vacanța în Santorini">Vezi detalii →</a>
                             </div>
                         </div>
                     </div>
@@ -107,7 +126,7 @@
             </div>
         </section>
 
-        <section class="why-us">
+        <section class="why-us" id="despre-noi">
             <div class="container">
                 <h2>De Ce TravelSphere?</h2>
                 <p class="section-subtitle">Partenerul Tău de Încredere în Călătorii</p>
@@ -137,6 +156,7 @@
                 <h2>Ce Spun Clienții Noștri</h2>
                 
                 <div class="testimonial-grid">
+                    
                     <div class="testimonial-card">
                         <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
                         <p class="quote">"Cea mai frumoasă vacanță din viața mea! TravelSphere ne-a organizat totul perfect, de la zbor până la ultimul detaliu. Maldivele au fost un vis împlinit!"</p>
@@ -181,20 +201,21 @@
 
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="container footer-grid">
+            
             <div class="footer-col">
-                <a href="#" class="logo-footer">TravelSphere</a>
+                <a href="#acasa" class="logo-footer">TravelSphere</a>
                 <p>De peste 15 ani creăm vacanțe memorabile și experiențe unice pentru clienții noștri din întreaga lume.</p>
-                </div>
+            </div>
             
             <div class="footer-col">
                 <h3>Link-uri Rapide</h3>
                 <ul>
-                    <li><a href="#">Despre Noi</a></li>
-                    <li><a href="#">Destinații</a></li>
-                    <li><a href="#">Oferte Speciale</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#despre-noi">Despre Noi</a></li>
+                    <li><a href="#destinatii">Destinații</a></li>
+                    <li><a href="#destinatii">Oferte Speciale</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
 
@@ -210,12 +231,13 @@
 
             <div class="footer-col">
                 <h3>Contact</h3>
-                <p>📍 Str.Colesova 1<br>Balti, Moldova</p>
+                <p>📍 Str.Colesova 1<br>Bălți, Moldova</p>
                 <p>📞 +373 (760) 556-57</p>
                 <p>✉️ travelpheremd@gmail.com</p>
             </div>
         </div>
-        <div class="footer-bottom">
+        
+        <div class="footer-bottom container">
             <p>&copy; 2025 TravelSphere. Toate drepturile rezervate.</p>
             <div class="footer-bottom-links">
                 <a href="#">Termeni și Condiții</a>
