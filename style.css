@@ -134,7 +134,7 @@ img {
     justify-content: center;
     text-align: center;
     color: #ffffff;
-    background-image: url('/backgrounds.jpg');
+    background-image: url('/imagini/backgrounds.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -512,4 +512,24 @@ img {
 
 .footer-bottom-links a:hover {
     color: #ffffff;
+}
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 15px;
+    }
+    
+    .nav-links a {
+        margin-left: 0;
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
 }
