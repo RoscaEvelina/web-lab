@@ -14,6 +14,21 @@ document.addEventListener('DOMContentLoaded', function() {
             case 'maldive':
                 window.location.href = 'destinatii/maldive.html';
                 break;
+            case 'dubai':
+                window.location.href = 'destinatii/dubai.html';
+                break;
+            case 'roma':
+                window.location.href = 'destinatii/roma.html';
+                break;
+            case 'tokyo':
+                window.location.href = 'destinatii/tokyo.html';
+                break;
+            case 'barcelona':
+                window.location.href = 'destinatii/barcelona.html';
+                break;
+            case 'istanbul':
+                window.location.href = 'destinatii/istanbul.html';
+                break;
             default:
                 searchForm.submit();
                 break;
